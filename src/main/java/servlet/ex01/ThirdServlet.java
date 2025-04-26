@@ -1,4 +1,4 @@
-package sec01.ex01;
+package servlet.ex01;
 
 import java.io.IOException;
 import javax.servlet.ServletConfig;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/third")
 public class ThirdServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;	// 서블릿 클래스 직렬화를 위해 이클립스에서 자동으로 지정한 상수
 
 	/**
 	 * @see Servlet#init(ServletConfig)

@@ -1,4 +1,4 @@
-package sec01.ex01;
+package servlet.ex01;
 
 import java.io.IOException;
 
