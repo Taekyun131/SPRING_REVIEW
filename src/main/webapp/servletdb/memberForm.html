@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 창</title>
+<script type="text/javascript">
+	function fn_sendMember(){
+		// 자바스크립트에서 <form> 태그의 name으로 접근해 입력한 값 저장
+		var formMember=document.formMember;
+		var id=formMember.id.value;
+		var pwd=formMember.pwd.value;
+		var name=formMember.name.value;
+		var email=formMember.email.value;
+		
+		// 유효성 검사
+		if(id.length==0 || id==""){
+			alert("아이디는 필수입니다.");
+		}else if(pwd.length==0 || pwd==""){
+			alert("비밀번호는 필수입니다.");
+		}else if(name.length==0 || name==""){
+			alert("이름은 필수입니다.")
+		}else if(email.length==0 || email==""){
+			alert("이메일은 필수입니다.")
+		}else{
+			formMember.method="post";	// 전송방법을 post로 지정
+			formMember.action="/pracSpring/member4"	// 서블릿 매핑 이름을 member4로 지정
+			formMember.submit();		// 서블릿으로 전송
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="formMember">
+		<table>
+			<th>회원가입 창</th>
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id"></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="pwd"></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+		</table>
+		<input type="button" value="가입하기" onClick="fn_sendMember()">
+		<input type="reset" value="다시 입력">
+		<input type="hidden" name="command" value="addMember" />	<!-- <hidden> 태그를 이용해 서블릿에게 회원등록입을 알림 -->
+	</form>
+</body>
+</html>
