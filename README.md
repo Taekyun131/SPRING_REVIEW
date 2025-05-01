@@ -4,3 +4,4 @@
 ## 4일차 - <form> 태그를 사용한 서블릿 매핑 및 GET&POST 메서드
 ## 5일차 - 서블릿 매핑 연습
 ## 6일차 - OJDBC와 DBCP 라이브러리를 사용해 데이터베이스 연동 및 커넥션풀 사용
+## 7일차 - 서블릿 포워드와 바인딩 기능, ServletContext와 ServletConfig 사용법
