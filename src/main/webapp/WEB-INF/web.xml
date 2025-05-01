@@ -9,13 +9,15 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <!-- Servlet 수동 매핑 -->
   <servlet>
     <servlet-name>aaa</servlet-name>
-    <servlet-class>servlet.ex.FirstServlet</servlet-class>
+    <servlet-class>servlet._01_ex01.FirstServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>bbb</servlet-name>
-    <servlet-class>servlet.ex.SecondServlet</servlet-class>
+    <servlet-class>servlet._01_ex01.SecondServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>aaa</servlet-name>
@@ -25,4 +27,41 @@
     <servlet-name>bbb</servlet-name>
     <url-pattern>/second</url-pattern>
   </servlet-mapping>
+  
+  <!-- ServletContext 매개변수 수동설정 -->
+  <context-param>
+  	<param-name>menu_member</param-name>
+  	<param-value>회원등록	회원조회	회원수정</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>menu_order</param-name>
+  	<param-value>주문조회	주문등록	주문수정	주문취소</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>menu_goods</param-name>
+  	<param-value>상품조회	상품등록	상품수정	상품삭제</param-value>
+  </context-param>
+  
+  
+  <!-- ServletConfig 변수 수동설정 -->
+	<servlet>
+		<servlet-name>sinit</servlet-name>
+		<servlet-class>servlet._04_servletcontext.InitParamServlet</servlet-class>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>admin@jweb.com</param-value>
+		</init-param>
+		<init-param>
+			<param-name>tel</param-name>
+			<param-value>010-1111-2222</param-value>
+		</init-param>
+	</servlet>
+	
+	
+	<!-- load-on-startup 기능 수동설정 -->
+	<servlet>
+		<servlet-name>loadConfig</servlet-name>	<!-- 애너테이션으로 서블릿 생성 시 name 속성값으로 설정 -->
+		<servlet-class>servlet._04_servletcontext.LoadAppConfig</servlet-class>
+		<load-on-startup>1</load-on-startup>	<!-- 우선순위 설정 -->
+	</servlet>
 </web-app>
