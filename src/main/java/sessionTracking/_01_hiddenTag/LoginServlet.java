@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/stLogin")
 public class LoginServlet extends HttpServlet{
-
+	
+	// 웹 페이지 사이의 상태나 정보를 공유하기 위해 세션 트래킹 사용
 	// <hidden> 태그는 브라우저에는 표시되지 않지만 미리 저장된 정보를 서블릿으로 전송가능
 	public void init() throws ServletException {
 		System.out.println("init 메서드 호출");
