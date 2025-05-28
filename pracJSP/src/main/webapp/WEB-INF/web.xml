@@ -9,4 +9,19 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <!-- 404와 500 오류 발생 시 예외 처리를 할 페이지를 지정 -->
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/jsp02/jspException/error_404.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/jsp02/jspException/error_500.jsp</location>
+  </error-page>
+  
+  <welcome-file-list>
+  	<welcome-file>/jsp02/main/main.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>
