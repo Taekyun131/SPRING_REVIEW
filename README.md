@@ -12,3 +12,4 @@
 ## 12일차 - JSP 스크립트 태그를 사용한 선언문, 스크립트릿, 표현식
 ## 13일차 - 내장객체를 활용한 JSP 페이지 적용, JSP 에외처리, DB 연동해 JSP로 데이터 출력 구현
 ## 14일차 - JSP 액션태그 활용(include, forward, useBean, setProperty/getProperty)
+## 15일차 - 표현언어 연산자와 내장객체 활용
