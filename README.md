@@ -13,3 +13,4 @@
 ## 13일차 - 내장객체를 활용한 JSP 페이지 적용, JSP 에외처리, DB 연동해 JSP로 데이터 출력 구현
 ## 14일차 - JSP 액션태그 활용(include, forward, useBean, setProperty/getProperty)
 ## 15일차 - 표현언어 연산자와 내장객체 활용
+## 16일차 - JSTL Core태그 실습(<c:set>, <c:remove>, <c:if>, <c:choose>, <c:forEach>, <c:url>, <c:redirect>, c:out>)
