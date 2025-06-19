@@ -14,3 +14,4 @@
 ## 14일차 - JSP 액션태그 활용(include, forward, useBean, setProperty/getProperty)
 ## 15일차 - 표현언어 연산자와 내장객체 활용
 ## 16일차 - JSTL Core태그 실습(<c:set>, <c:remove>, <c:if>, <c:choose>, <c:forEach>, <c:url>, <c:redirect>, c:out>)
+## 17일차 - JSTL Core태그 응용 및 다국어 태그, fmt, function태그 실습
