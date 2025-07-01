@@ -16,4 +16,5 @@
 ## 16일차 - JSTL Core태그 실습(<c:set>, <c:remove>, <c:if>, <c:choose>, <c:forEach>, <c:url>, <c:redirect>, c:out>)
 ## 17일차 - JSTL Core태그 응용 및 다국어 태그, fmt, function태그 실습
 ## 18일차 - 파일 업로드 및 다운로드 기능 실습
-## 19일차 - HTML 기본구조 생성, JQuery를 사용한 DOM 조작 및 AJAX 비동기 통신
+## 19일차 - HTML 기본구조 생성, jQuery를 사용한 DOM 조작 및 AJAX 비동기 통신
+## 20일차 - AJAX 방식을 사용해 JSON 형식으로 데이터 통신
