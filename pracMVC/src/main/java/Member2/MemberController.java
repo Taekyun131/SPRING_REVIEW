@@ -45,9 +45,29 @@ public class MemberController extends HttpServlet{
 			String email=request.getParameter("email");
 			MemberVO memberVO=new MemberVO(id, pwd, name, email);
 			memberDAO.addMember(memberVO);
+			request.setAttribute("msg", "addMember");
 			nextPage="/member/listMembers.do";	// 회원등록 이후 다시 회원목록 출력
 		}else if(action.equals("/memberForm.do")) {		// action값이 /memberForm.do면 회원가입창을 화면에 출력
 			nextPage="/Member/memberForm.jsp";	
+		}else if(action.equals("/modMemberForm.do")){	// 회원 수정창 요청 시 ID로 회원정보를 조회한 후 수정창으로 포워딩
+			String id=request.getParameter("id");
+			MemberVO memInfo=memberDAO.findMember(id);
+			request.setAttribute("memInfo", memInfo);
+			nextPage="/Member/modMemberForm.jsp";
+		}else if(action.equals("/modMember.do")) {	// 테이블의 회원 정보 수정
+			String id=request.getParameter("id");
+			String pwd=request.getParameter("pwd");
+			String name=request.getParameter("name");
+			String email=request.getParameter("email");
+			MemberVO memberVO=new MemberVO(id, pwd, name, email);
+			memberDAO.modMember(memberVO);
+			request.setAttribute("msg", "modified");
+			nextPage="/member/listMembers.do";
+		}else if(action.equals("/delMember.do")) {
+			String id=request.getParameter("id");
+			memberDAO.delMember(id);
+			request.setAttribute("msg", "deleted");
+			nextPage="/member/listMembers.do";
 		}else {		// 그 외 다른 action값은 회원목록을 출력
 			List<MemberVO>membersList=memberDAO.listMembers();
 			request.setAttribute("membersList", membersList);
